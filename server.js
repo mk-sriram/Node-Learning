@@ -1,15 +1,27 @@
-const express = require("express") //import express as module 
 
-const app = express() // calling expres as a function, creates an application for express 
+// const os = require('os'); 
+// const path = require('path')
 
-//local hosting at port 3000 , here we are hosting it on this 
-app.set('view engine','ejs')
-//express is basicaly just having bunch of ports for the GET, POST, requests 
+// const { add, subtract, multiply, divide} = require('./math') // a module math.js with export.add(a,b) => {return a+b;}
+// console.log(os.type())
+// console.log(os.version())
+// console.log(os.homedir())
 
-app.get('/', (req,res) => {
-    //any time we are accessing the local3000 URL, would be a different URL if you're hosted
-    res.render('index')
-    //res.status(500).send("THE ERROR")
-})
+// console.log(__dirname)
+// console.log(__filename)
+// console.log(path.dirname(__filename))
 
-app.listen(3000) 
+// console.log(path.parse(__filename)) // parses the entire path into an object ( probably the most useful )
+
+
+// READING AND WRITING FILES
+// const fs = require('fs')
+
+// fs.readFile('./files/starter.txt')
+
+
+const { format } = require('date-fns'); 
+const { v4: uuid} = require('uuid');  //v4 as uuid ( uuid(function parameter))
+
+console.log(format(new Date(), 'yyyyMMdd\tHH:mm:ss'))
+
