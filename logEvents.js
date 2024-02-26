@@ -23,5 +23,20 @@
 const { format } = require('date-fns'); 
 const { v4: uuid} = require('uuid');  //v4 as uuid ( uuid(function parameter))
 
+const fs = require('fs'); 
+const path = require('path'); 
+const fsPromises = require('fs').promises; 
+
+const logEvents = async ( message ) => { 
+    const datatime = `${format(new Date(), 'yyyyMMdd\tHH:mm:ss')}` ;
+    const logItem = `${datatime}\t${uuid()}\t${message}` ; 
+    console.log(logItem); 
+
+    try { 
+
+    } catch ( err ) { 
+        console.err(err); 
+    }
+}
 console.log(format(new Date(), 'yyyyMMdd\tHH:mm:ss'))
 
